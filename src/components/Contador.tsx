@@ -8,7 +8,11 @@ function Contador() {
         if(type){ // Function Acréscimo
             setResult(result + value)
         }else{ // Function Decréscimo
-            setResult(result - value)
+            if(result - value > 0){
+                setResult(result - value)
+            }else{
+                setResult(0)
+            }
         }
     }
 
@@ -54,7 +58,7 @@ function Contador() {
                                 handleResult(0, 1)
                             }}
                         >
-                            +1
+                            -1
                         </Button>
                         <Button 
                             color="error"
@@ -62,7 +66,7 @@ function Contador() {
                                 handleResult(0, 10)
                             }}
                         >
-                            +10
+                            -10
                         </Button>
                         <Button 
                             color="error"
@@ -70,7 +74,7 @@ function Contador() {
                                 handleResult(0, 100)
                             }}
                         >
-                            +100
+                            -100
                         </Button>
                     </ButtonGroup>
                 </Grid>
